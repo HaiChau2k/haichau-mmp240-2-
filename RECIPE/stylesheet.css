@@ -1,0 +1,18 @@
+h2 {
+    color:rgb(65, 172, 65);
+    font-family: 'trebuchet ms', sans-serif;
+}
+h3 {
+    color:rgb(65, 172, 65);
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:beige;
+    width: 1000px;
+    border:solid 3px red;}
+h1 {width: 300px;
+    background-color: rgb(158, 154, 125);
+    border: 5px solid rgb(230, 176, 101);
+    padding:20px;
+    margin:20px;
+}
