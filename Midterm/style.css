@@ -116,8 +116,7 @@ nav a{
     margin-right: 30px;
     margin-bottom: 30px;
     border:none;
-    /*border:solid .75px #ddd;*/
-    flex: 1 1 auto;  /*flow-grow, flex-shrink,flex-basis*/
+    flex: 1 1 auto;  
     padding: .93em;
 }
 
