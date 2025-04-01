@@ -1,13 +1,4 @@
 
-
-
-/*{
-    marign:0;
-    padding:0;
-    border:none;
-
-}*/
-
 #wrapper{
     max-width: 1280px;
     margin-right: auto;
@@ -36,7 +27,7 @@ header{
  height: auto; 
  background-color: none;
  opacity: 1.0;}
- 
+
 .text{
     color: white;
     font-size: 22px;
