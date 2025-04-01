@@ -76,7 +76,6 @@ nav{
     padding: 1px;
     text-align: left;
     margin-top: -1%;
-
 }
 
 nav li{ border-radius: 25px;
@@ -105,7 +104,6 @@ nav a{
     width:50%;
 }
 
-/*this are episodesstyles*/
 
 .episodes {
     display: flex;
