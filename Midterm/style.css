@@ -50,7 +50,6 @@ header {
     border: 1px solid #333;
 }
 
-/* Button Styles */
 .btn {
     display: inline-block;
     background-color: #000;
@@ -138,7 +137,7 @@ main::after {
     width: 50%;
 }
 
-/* Episodes Styles */
+/* Episodes styles*/
 .episodes {
     display: flex;
     flex-wrap: wrap;
@@ -182,7 +181,6 @@ main::after {
     margin: 0;
 }
 
-/* Footer Styles */
 footer {
     background-color: #000;
     color: #fff;
@@ -191,7 +189,6 @@ footer {
     border-top: 1px solid #333;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .col-right, .col-left {
         width: 100%;
