@@ -1,140 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initail-scale=1.0">
-        <title>HALO</title>
-        <link rel="stylesheet" href="style.css">
-      </div>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Baskervville:ital@0;1&family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Josefin+Sans:ital,wght@0,700;1,400&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Slabo+27px&display=swap">
-     </div>
-     </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALO - Episodes</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: "Josefin Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-    <body>
-             
-        <div id="wrapper">
-        <header> 
+        #wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-        <div class="image-cointainer">
-          <h1><img src="images/logoscopy.png" alt="Logo" style="width: 40%;"></h1>
-        <p class="text">Master Chief, a cybernetically enhanced super-soldier,<br> defends humanity from the alien Covenant<br> in the 26th century.</p>
-        
-        <a href="#" class="btn">TRY IT NOW</a>
-       
-       
-      </header>
-      
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+        }
+
+        /* Season Sections */
+        .season-section {
+            margin-bottom: 50px;
+            background: rgba(20, 20, 20, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #333;
+        }
+
+        .season-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #444;
+        }
+
+        .season-title {
+            font-size: 1.8em;
+            margin: 0;
+            color: #fff;
+        }
+
+        .season-year {
+            margin-left: 15px;
+            font-size: 1em;
+            color: #999;
+            font-style: italic;
+        }
+
+        .season-poster {
+            width: 120px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 20px;
+            border: 1px solid #444;
+        }
+
+        .season-info {
+            flex-grow: 1;
+        }
+
+        .season-description {
+            color: #ccc;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        /* Episodes Grid */
+        .episodes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .episode-card {
+            background-color: #111;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+            border-color: #666;
+        }
+
+        .episode-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 1px solid #333;
+        }
+
+        .episode-info {
+            padding: 15px;
+        }
+
+        .episode-number {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+
+        .episode-title {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .episode-description {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .episode-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #000;
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid #333;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #222;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .episodes-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+            
+            .season-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .season-poster {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .episodes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
         <nav>
-        <ul>
-          <li><a href="index.html">ABOUT</a></li>
-          <li><a href="episodes.html">EPISODES</a></li>
-          <li><a href="#">MORE LIKE THIS</a></li>
-        </ul>
-        </nav>  
-       
-       <main>
-        <h2> Episodes</h2>
-       
-        <h3>Season 1</h3> 
-       <div class="episodes"> 
-        <div class="episodes-card">
-            <img src="images/s1ep1.jpg" alt="Episode 1" width="300px">
-             <h4>S1E1. Contact</h4>
-            <p>In the year 2552, humans on the planet Madrigal fight for independence from Earth, but a fatal encounter with the Alien Covenant complicates things.</p>
-       </div>
-       <div class="episodes-card">
-        <img src="images/s1ep2.jpg" alt="Episode 2" width="300px">   
-            <h4>S1E2. Unbound</h4>
-            <p>John takes Kwan to an old friend and learns more about the mystery object, which the Covenant and Makee are determined to steal.</p>
-        </div>
-        <div class="episodes-card">
-            <img src="images/s1ep3.jpg" alt="Episode 3" width="300px">
-            <h4>S1E3. Emergence</h4>
-            <p>John meets his new partner and discovers secrets inside his own memory.</p>
-        </div>
-        <div class="episodes-card">
-            <img src="images/s1ep4.jpg" alt="Episode 4" width="300px">
-            <h4>S1E4. Homecoming</h4>
-            <p>John takes Halsey and Cortana to look for answers from his past; Kwan searches for an army.</p>
-        </div>
-        <div class="episodes-card">
-            <img src="images/s1ep5.jpg" alt="Episode 5" width="300px">
-            <h4>S1E5. Reckoning</h4>
-            <p>On the run and out of options, Kwan and Soren have a difference of opinion. With the possibility of finding the mysterious Halo on everyone's minds.</p>
-        </div>
-        <div class="episodes-card">
-            <img src="images/s1ep6.jpg" alt="Episode 6 " width="300px">
-            <h4>S1E6. Solace</h4>
-            <p>John confronts Dr Halsey and the lies of his past and the new prisoner seems to know John better than he knows himself.</p>
-        </div>
-        <div class="episodes-card">
-            <img src="images/s1ep7.jpg" alt="Episode 7 " width="300px">
-            <h4>S1E7. Inheritance</h4>
-            <p>Kwan's journey to uncover her family's `true purpose' takes her deep into the deserts of Madrigal.</p>
-        </div>
-        <div class="episodes-card">
-            <img src="images/s1ep8.jpg" alt="Episode 8" width="300px">
-            <h4>S1E8. Allegiance </h4>
-            <p>John and Makee come to terms with their shared vision. Halsey has one last chance to save her mission, and herself.</p>
-        </div>
-        </div>
-        
-        <h3>Season 2</h3>
-        <div class="episodes">
-            <div class="episodes-card">
-            <img src="images/s2ep1.jpg" alt="Episode 1" width="300px">
-            <h4>S2E1. Sanctuary</h4>
-            <p>A deadly evacuation mission signals a shift in Master Chief's war with the Covenant.</p>
-        </div>
-        <div class="episodes-card">
-            <img src="images/s2ep2.jpg" alt=Episode 2  width="300px">
-            <h4>S2E2. Sword</h4>
-            <p>John pushes Silver Team to its limit as he searches for missing Spartans.</p>
-        </div>
-        <div class="episodes-card">
-            <img src="images/s2ep3.jpg" alt="Episode 3" width="300px">
-            <h4>S2E3. Visegrad</h4>
-            <p>John and Silver Team embark on an unsanctioned mission.</p>
-        </div>
-        <div class="episodes-card">
-            <img src="images/s2ep4.jpg" alt="Episode 4" width="300px">
-            <h4>S2E4. Remember Reach</h4>
-            <p>A covenant assault threatens humanity's most important stronghold.</p>
-        </div>
-            <div class="episodes-card">
-            <img src="images/s2ep5.jpg" alt="Episode 5" width="300px">
-            <h4>S2E5. Aleria</h4>
-            <p>In the aftermath of defeat, the survivors struggle to pick up the pieces; on the desolate planet of Aleria.</p>
-        </div>
-            <div class="episodes-card">
-             <img src="images/s2ep6.jpg" alt="Episode 6" width="300px">
-            <h4>S2E6. Onyx</h4>
-            <p>John seeks revenge on a secret ONI planet; Perez trains to become a new kind of soldier.</p>
-        </div>
-            <div class="episodes-card">
-             <img src="images/s2ep7.jpg" alt="Episode 7" width="300px">
-            <h4>S2E7. Therolyplae</h4>
-            <p>John-117 comes face to face with Makee; a revelation leads Ackerson to question his loyalties.</p>
-        </div>
-            <div class="episodes-card">
-            <img src="images/s2ep8.jpg" alt="Episode 8" width="300px">
-            <h4>S2E8. Halo</h4>
-            <p>The climactic battle for the Halo begins. John makes a fateful choice.</p>
-        </div>
-    
-        
-        </main>
+            <ul>
+                <li><a href="index.html">ABOUT</a></li>
+                <li><a href="episodes.html">EPISODES</a></li>
+                <li><a href="#">MORE LIKE THIS</a></li>
+            </ul>
+        </nav>
 
-        <footer> 
+        <h1>HALO EPISODES</h1>
 
-        </footer>
+        <!-- Season 1 Section -->
+        <section class="season-section">
+            <div class="season-header">
+                <img src="images/season1-poster.jpg" alt="Halo Season 1" class="season-poster">
+                <div class="season-info">
+                    <h2 class="season-title">Season 1 <span class="season-year">(2022)</span></h2>
+                    <p class="season-description">
+                        The first season follows Master Chief John-117, a cybernetically enhanced supersoldier, 
+                        as he leads the fight against the Covenant for the fate of humanity. Along the way, 
+                        he discovers a mysterious alien artifact that awakens memories of his forgotten past.
+                    </p>
+                </div>
+            </div>
 
+            <div class="episodes-grid">
+                <!-- Episode 1 -->
+                <div class="episode-card">
+                    <img src="images/s1e1.jpg" alt="Episode 1" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S1E1</span>
+                        <h3 class="episode-title">Contact</h3>
+                        <p class="episode-description">Master Chief leads Spartans against the Covenant on Madrigal and discovers a mysterious artifact.</p>
+                        <div class="episode-meta">
+                            <span>45 min</span>
+                            <span>Mar 24, 2022</span>
+                        </div>
+                    </div>
+                </div>
 
- </div>
-        </body>
-        </html>
+                <!-- Episode 2 -->
+                <div class="episode-card">
+                    <img src="images/s1e2.jpg" alt="Episode 2" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S1E2</span>
+                        <h3 class="episode-title">Unbound</h3>
+                        <p class="episode-description">John's visions intensify as Makee proves her value to the Covenant.</p>
+                        <div class="episode-meta">
+                            <span>52 min</span>
+                            <span>Mar 31, 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="episode-card">
+                    <img src="images/s1e3.jpg" alt="Episode 3" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S1E3</span>
+                        <h3 class="episode-title">Emergence</h3>
+                        <p class="episode-description">John struggles to understand his visions while the Covenant closes in on a vital secret.</p>
+                        <div class="episode-meta">
+                            <span>48 min</span>
+                            <span>Apr 7, 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 4 -->
+                <div class="episode-card">
+                    <img src="images/s1e4.jpg" alt="Episode 4" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S1E4</span>
+                        <h3 class="episode-title">Homecoming</h3>
+                        <p class="episode-description">John returns to his childhood home of Eridanus II, confronting painful memories.</p>
+                        <div class="episode-meta">
+                            <span>51 min</span>
+                            <span>Apr 14, 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 5 -->
+                <div class="episode-card">
+                    <img src="images/s1e5.jpg" alt="Episode 5" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S1E5</span>
+                        <h3 class="episode-title">Reckoning</h3>
+                        <p class="episode-description">The UNSC discovers shocking Covenant plans as Spartan tensions rise.</p>
+                        <div class="episode-meta">
+                            <span>49 min</span>
+                            <span>Apr 21, 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 6 -->
+                <div class="episode-card">
+                    <img src="images/s1e6.jpg" alt="Episode 6" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S1E6</span>
+                        <h3 class="episode-title">Solace</h3>
+                        <p class="episode-description">John and Cortana delve deeper into the artifact's mystery.</p>
+                        <div class="episode-meta">
+                            <span>47 min</span>
+                            <span>Apr 28, 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 7 -->
+                <div class="episode-card">
+                    <img src="images/s1e7.jpg" alt="Episode 7" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S1E7</span>
+                        <h3 class="episode-title">Inheritance</h3>
+                        <p class="episode-description">Truth about John's origins comes to light as the Covenant prepares an offensive.</p>
+                        <div class="episode-meta">
+                            <span>50 min</span>
+                            <span>May 5, 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 8 -->
+                <div class="episode-card">
+                    <img src="images/s1e8.jpg" alt="Episode 8" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S1E8</span>
+                        <h3 class="episode-title">Loyalty</h3>
+                        <p class="episode-description">John must choose between duty and personal beliefs as war reaches a turning point.</p>
+                        <div class="episode-meta">
+                            <span>53 min</span>
+                            <span>May 12, 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 9 -->
+                <div class="episode-card">
+                    <img src="images/s1e9.jpg" alt="Episode 9" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S1E9</span>
+                        <h3 class="episode-title">Transcendence</h3>
+                        <p class="episode-description">The artifact activates, revealing its true purpose and changing the war forever.</p>
+                        <div class="episode-meta">
+                            <span>55 min</span>
+                            <span>May 19, 2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Season 2 Section -->
+        <section class="season-section">
+            <div class="season-header">
+                <img src="images/season2-poster.jpg" alt="Halo Season 2" class="season-poster">
+                <div class="season-info">
+                    <h2 class="season-title">Season 2 <span class="season-year">(2024)</span></h2>
+                    <p class="season-description">
+                        In the second season, Master Chief John-117 leads his team of Spartans against 
+                        a resurgent Covenant threat. With the discovery of Halo, the stakes have never 
+                        been higher as humanity fights for survival against overwhelming odds.
+                    </p>
+                </div>
+            </div>
+
+            <div class="episodes-grid">
+                <!-- Episode 1 -->
+                <div class="episode-card">
+                    <img src="images/s2e1.jpg" alt="Episode 1" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S2E1</span>
+                        <h3 class="episode-title">The Rubicon</h3>
+                        <p class="episode-description">John is stranded on a hostile world, separated from his team and equipment.</p>
+                        <div class="episode-meta">
+                            <span>48 min</span>
+                            <span>Feb 8, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="episode-card">
+                    <img src="images/s2e2.jpg" alt="Episode 2" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S2E2</span>
+                        <h3 class="episode-title">Sword</h3>
+                        <p class="episode-description">John fights for survival while the UNSC debates a rescue mission.</p>
+                        <div class="episode-meta">
+                            <span>46 min</span>
+                            <span>Feb 15, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="episode-card">
+                    <img src="images/s2e3.jpg" alt="Episode 3" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S2E3</span>
+                        <h3 class="episode-title">Vow</h3>
+                        <p class="episode-description">Kwan discovers secrets about her family's past as her journey continues.</p>
+                        <div class="episode-meta">
+                            <span>49 min</span>
+                            <span>Feb 22, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 4 -->
+                <div class="episode-card">
+                    <img src="images/s2e4.jpg" alt="Episode 4" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S2E4</span>
+                        <h3 class="episode-title">Allegiance</h3>
+                        <p class="episode-description">Old alliances are tested as new threats emerge from within.</p>
+                        <div class="episode-meta">
+                            <span>51 min</span>
+                            <span>Feb 29, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 5 -->
+                <div class="episode-card">
+                    <img src="images/s2e5.jpg" alt="Episode 5" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S2E5</span>
+                        <h3 class="episode-title">Onyx</h3>
+                        <p class="episode-description">The Spartans embark on a dangerous mission to a classified UNSC facility.</p>
+                        <div class="episode-meta">
+                            <span>52 min</span>
+                            <span>Mar 7, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 6 -->
+                <div class="episode-card">
+                    <img src="images/s2e6.jpg" alt="Episode 6" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S2E6</span>
+                        <h3 class="episode-title">Axe</h3>
+                        <p class="episode-description">The Covenant launches a devastating attack forcing desperate measures.</p>
+                        <div class="episode-meta">
+                            <span>54 min</span>
+                            <span>Mar 14, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 7 -->
+                <div class="episode-card">
+                    <img src="images/s2e7.jpg" alt="Episode 7" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S2E7</span>
+                        <h3 class="episode-title">Halo</h3>
+                        <p class="episode-description">The legendary ringworld is discovered, but its purpose remains a mystery.</p>
+                        <div class="episode-meta">
+                            <span>56 min</span>
+                            <span>Mar 21, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 8 -->
+                <div class="episode-card">
+                    <img src="images/s2e8.jpg" alt="Episode 8" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S2E8</span>
+                        <h3 class="episode-title">Legacy</h3>
+                        <p class="episode-description">John confronts his past as the UNSC prepares for humanity's final stand.</p>
+                        <div class="episode-meta">
+                            <span>53 min</span>
+                            <span>Mar 28, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 9 -->
+                <div class="episode-card">
+                    <img src="images/s2e9.jpg" alt="Episode 9" class="episode-image">
+                    <div class="episode-info">
+                        <span class="episode-number">S2E9</span>
+                        <h3 class="episode-title">Ascension</h3>
+                        <p class="episode-description">The season finale brings an epic battle that changes the course of the war.</p>
+                        <div class="episode-meta">
+                            <span>60 min</span>
+                            <span>Apr 4, 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
