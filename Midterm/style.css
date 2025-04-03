@@ -66,11 +66,11 @@ header {
     cursor: pointer;
 }
 
-.btn:hover {
+/*.btn:hover {
     background-color: #222;
     color: #fff;
     transform: translateY(-2px);
-}
+}*/
 
 nav {
     background-color: #000;
@@ -100,7 +100,7 @@ nav a {
     border-radius: 5px;
 }
 
-nav a:hover {
+/*nav a:hover {
     background-color: #111;
     color: #fff;
 }
