@@ -154,10 +154,10 @@ main::after {
     transition: transform 0.3s;
 }
 
-.episodes-card:hover {
+/*.episodes-card:hover {
     transform: translateY(-5px);
     border-color: #555;
-}
+}*/
 
 .episodes-card:last-child {
     margin-right: 15px;
