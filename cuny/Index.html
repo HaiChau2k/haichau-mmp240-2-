@@ -4,93 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find a Design Program</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        
-        h1 {
-            color: #bb86fc;
-            margin-bottom: 20px;
-        }
-        
-        .search-container {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        
-        select {
-            background-color: #1e1e1e;
-            color: #e0e0e0;
-            border: 1px solid #333;
-            padding: 8px 12px;
-            border-radius: 4px;
-        }
-        
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: #333;
-            margin: 20px 0;
-        }
-        
-        .highlight {
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border-left: 4px solid #bb86fc;
-        }
-        
-        .highlight h2 {
-            color: #ffffff;
-            margin-top: 0;
-        }
-        
-        .apply-button {
-            background-color: #bb86fc;
-            color: #000000;
-            border: none;
-            padding: 10px 20px;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .apply-button:hover {
-            background-color: #9a67ea;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Find a Design Program</h1>
-    
-    <div class="search-container">
-        <select>
-            <option>Discipline</option>
-        </select>
-        
-        <select>
-            <option>Degree</option>
-        </select>
-        
-        <select>
-            <option>Borough</option>
-        </select>
+    <div class="nav-bar">
+        <div class="nav-title">DESIGN @ CUNY</div>
+        <div class="nav-links">
+            <a href="#">ABOUT CUNY</a>
+            <a href="#">FINANCIAL AID</a>
+            <a href="#">APPLY</a>
+            <input type="text" class="search-box" placeholder="Search">
+        </div>
     </div>
     
-    <hr>
-    
-    <div class="highlight">
-        <h2>Queens College Ranked in Top 25 of Best Public Colleges and Universities for Graphic Design in the Nation</h2>
-        <button class="apply-button">APPLY</button>
+    <div class="content">
+        <h1>Find a Design Program</h1>
+        
+        <div class="search-container">
+            <select>
+                <option>Discipline</option>
+            </select>
+            <select>
+                <option>Degree</option>
+            </select>
+            <select>
+                <option>Borough</option>
+            </select>
+        </div>
+        
+        <hr>
+        
+        <div class="highlight">
+            <h2>Queens College Ranked in Top 25 of Best Public Colleges and Universities for Graphic Design in the Nation</h2>
+            <button class="apply-button">APPLY</button>
+        </div>
     </div>
 </body>
 </html>

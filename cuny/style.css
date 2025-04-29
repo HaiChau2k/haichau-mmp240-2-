@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.nav-title {
+    color: #bb86fc;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.search-box {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Main Content */
+.content {
+    padding: 20px;
+}
+
+h1 {
+    color: #bb86fc;
+    margin-bottom: 20px;
+}
+
+/* Search Form */
+.search-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.search-container select {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+/* Divider */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #333;
+    margin: 20px 0;
+}
+
+/* Featured Content */
+.highlight {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #bb86fc;
+}
+
+.highlight h2 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+/* Buttons */
+.apply-button {
+    background-color: #bb86fc;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
