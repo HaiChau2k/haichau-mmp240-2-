@@ -203,3 +203,38 @@ hr {
         width: 100%;
     }
 }
+
+/* Program Card Styles */
+.program-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 4px solid #bb86fc;
+}
+
+.program-header h2 {
+    color: #bb86fc;
+    margin: 0 0 5px 0;
+    font-size: 1.8rem;
+}
+
+.program-header h3 {
+    color: #e0e0e0;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.program-content h4 {
+    color: #ffffff;
+    margin: 20px 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.program-content p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+}
+
