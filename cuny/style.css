@@ -193,7 +193,7 @@ hr {
     line-height: 1.6;
 }
 
-/* For mobile responsiveness */
+/* For mobile */
 @media (max-width: 768px) {
     .event-container {
         flex-direction: column;
