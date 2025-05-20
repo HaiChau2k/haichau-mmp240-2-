@@ -3,333 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design @ CUNY</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_drop_down,menu">
-    <style>
-        /* DARK THEME STYLES */
-        :root {
-            --dark-bg: #121212;
-            --dark-card: #1e1e1e;
-            --accent: #bb86fc;
-            --text-light: #e0e0e0;
-            --text-dark: #000000;
-            --border: #333333;
-        }
-        
-        body {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        
-        #wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* HEADER STYLES */
-        header {
-            background-color: var(--dark-card);
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        h1 a {
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
-        
-        .menuwrap {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        .material-symbols-outlined {
-            color: var(--text-light);
-            cursor: pointer;
-        }
-        
-        /* NAVIGATION */
-        #top-nav {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        #top-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 15px;
-        }
-        
-        #top-nav a {
-            color: var(--text-light);
-            text-decoration: none;
-        }
-        
-        #top-nav input[type="search"] {
-            background-color: var(--dark-card);
-            border: 1px solid var(--border);
-            color: var(--text-light);
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
-        
-        /* PROGRAMS NAV */
-        .programs-nav {
-            background-color: var(--dark-card);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-        
-        .programs-nav h2, .programs-nav h3 {
-            color: var(--accent);
-            margin-top: 0;
-        }
-        
-        .programs-menu {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .dropdown {
-            position: relative;
-        }
-        
-        .dropdown > a {
-            color: var(--text-light);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .dropdown ul {
-            display: none;
-            position: absolute;
-            background-color: var(--dark-card);
-            padding: 10px;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            min-width: 200px;
-            z-index: 100;
-        }
-        
-        .dropdown:hover ul {
-            display: block;
-        }
-        
-        .dropdown li {
-            padding: 5px 0;
-        }
-        
-        .dropdown li a {
-            color: var(--text-light);
-            text-decoration: none;
-        }
-        
-        /* HERO SECTION */
-        .hero {
-            background-color: var(--dark-card);
-            padding: 40px;
-            border-radius: 8px;
-            margin: 20px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero strong {
-            color: var(--accent);
-        }
-        
-        .btn {
-            background-color: var(--accent);
-            color: var(--text-dark);
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-        }
-        
-        /* NEWS & EVENTS */
-        .news, .events {
-            background-color: var(--dark-card);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .news h2, .events h2 {
-            color: var(--accent);
-            margin-top: 0;
-        }
-        
-        article {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        article:last-child {
-            border-bottom: none;
-        }
-        
-        .date {
-            color: var(--accent);
-            font-size: 0.9rem;
-        }
-        
-        .more a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        
-        /* FOOTER */
-        footer {
-            background-color: var(--dark-card);
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-            border-radius: 8px;
-        }
-        
-        /* RESPONSIVE STYLES */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .programs-menu {
-                flex-direction: column;
-            }
-            
-            .dropdown ul {
-                position: static;
-                box-shadow: none;
-            }
-        }
-    </style>
+    <title>Find a Design Program</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="home">
-    <div id="wrapper">
-        <header>
-            <h1><a href="index.html">Design @ CUNY</a></h1>
-            <div class="menuwrap">
-                <span class="material-symbols-outlined" onclick="showMenu()">menu</span>
-                <nav id="top-nav">
-                    <ul>
-                        <li><a href="https://www.cuny.edu/about/">About CUNY</a></li>
-                        <li><a href="https://www.cuny.edu/financial-aid/">Financial Aid</a></li>
-                        <li><a href="https://www.cuny.edu/apply">Apply</a></li>
-                    </ul>
-                    <form action="/"><input type="search" value="search"></form>
-                </nav>
-            </div>
-        </header>
+<body>
+    <div class="nav-bar">
+        <div class="nav-title">DESIGN @ CUNY</div>
+        <button class="menu-toggle" onclick="showMenu()">☰</button>
+        <div class="nav-links" id="topmenu">
+            <a href="#">ABOUT CUNY</a>
+            <a href="#">FINANCIAL AID</a>
+            <a href="#">APPLY</a>
+            <input type="text" class="search-box" placeholder="Search">
+        </div>
+    </div>
 
-        <nav class="programs-nav">
-            <h2>Find a Design Program</h2>
-            <h3>Search by:</h3>
-            <ul class="programs-menu">
-                <li class="dropdown">
-                    <span class="material-symbols-outlined">arrow_drop_down</span>
-                    <a href="">Discipline</a>
+    <div class="content">
+        <h1>Find a Design Program</h1>
+        <div class="search-container">
+              <a href="">Discipline</a>
                     <ul>
                         <li><a href="digital-design.html">Digital Design</a></li>
                         <li><a href="animation.html">Animation</a></li>
                         <li><a href="industrial-design.html">Industrial Design</a></li>
                     </ul>
-                </li>
-                <li class="dropdown">
-                    <span class="material-symbols-outlined">arrow_drop_down</span>
-                    <a href="">Degree</a>
-                    <ul>
-                        <li><a href="associate.html">Associate</a></li>
-                        <li><a href="bachelors.html">Bachelor's</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <span class="material-symbols-outlined">arrow_drop_down</span>
-                    <a href="">Borough</a>
-                    <ul>
-                        <li><a href="bronx.html">Bronx</a></li>
-                        <li><a href="brooklyn.html">Brooklyn</a></li>
-                        <li><a href="queens.html">Queens</a></li>
-                        <li><a href="manhattan.html">Manhattan</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="hero">
-            <p><strong>Queens College</strong> <br>Ranked in top 25 of best public colleges and universities for graphic design in the nation.</p>
-            <a href="http://www.cuny.edu/admissions/apply-to-cuny/" class="btn">Apply</a>
+                </li><!--closing li.dropdown-->
+            <select>
+                <option>Degree</option>
+            </select>
+            <select>
+                <option>Borough</option>
+            </select>
         </div>
-
-        <main>
-            <section class="news">
-                <h2>Design News</h2>
-                <article>
-                    <h3><a href="https://www1.cuny.edu/mu/forum/2020/04/27/cuny-tv-wins-21st-new-york-emmy-award-for-animated-opening-sequence-of-shades-of-u-s/">CUNY TV Wins 21st New York Emmy Award For Animated Opening Sequence of 'Shades of U.S.'</a></h3>
+        
+        <hr>
+        
+        <div class="image-banner">
+            <img src="images/queenscollege.jpg" alt="Queens College Campus">
+            <div class="banner-overlay">
+                <div class="banner-text">
+                    <h2>Queens College Ranked in Top 25 of</h2>
+                    <h2>Best Public Colleges and Universities</h2>
+                    <h2>for Graphic Design in the Nation</h2>
+                </div>
+                <button class="apply-button">APPLY</button>
+            </div>
+        </div>
+        
+        <div class="design-news">
+            <h1>Design News</h1>
+            
+            <div class="news-article">
+                <div class="article-content">
+                    <h3>CUNY TV Wins 21st New York Emmy Award For Animated Opening Sequence of 'Shades of U.S.'</h3>
                     <p class="date">April 27, 2020</p>
                     <p>The City University of New York won two awards in the 63rd New York Emmy Awards, as CUNY TV and the New York City College of Technology each earned honors in Saturday's ceremony. The award for CUNY TV brings to 21 the total number of Emmys the station has been awarded by the National Academy of Television Arts & Sciences New York Chapter.</p>
-                    <p class="more"><a href="https://www1.cuny.edu/mu/forum/2020/04/27/cuny-tv-wins-21st-new-york-emmy-award-for-animated-opening-sequence-of-shades-of-u-s/">Read more</a></p>
-                </article>
-                <article>
-                    <h3><a href="https://www1.cuny.edu/mu/forum/2019/10/28/cuny-expands-digital-skills-curriculum-and-creates-student-pipeline-for-tech-jobs/">CUNY Expands Digital Skills Curriculum and Creates Student Pipeline for Tech Jobs</a></h3>
-                    <p class="date">October 28, 2018</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <hr class="news-divider">
+            
+            <div class="news-article">
+                <div class="article-content">
+                    <h3>CUNY Expands Digital Skills Curriculum and Creates Student Pipeline for Tech Jobs</h3>
+                    <p class="date">October 28, 2019</p>
                     <p>The City University of New York has significantly expanded its digital skills curriculum as part of a broad-based effort to produce a steady pipeline of diverse, adaptable, critical thinkers who can thrive in a workplace environment that is increasingly reliant on advanced digital technologies across most sectors of the economy. Another aim of this initiative is to encourage traditionally underrepresented groups to take up tech-focused areas of study.</p>
-                    <p class="more"><a href="https://www1.cuny.edu/mu/forum/2019/10/28/cuny-expands-digital-skills-curriculum-and-creates-student-pipeline-for-tech-jobs/">Read More</a></p>
-                </article>
-            </section>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <hr class="news-divider">
 
-            <section class="events">
+            <div class="news-article">
+
+                <div class="article-content">
+                    <h3>CUNY Expands Digital Skills Curriculum and Creates Student Pipeline for Tech Jobs</h3>
+                    <p class="date">October 28, 2019</p>
+                    <p>The City University of New York has significantly expanded its digital skills curriculum as part of a broad-based effort to produce a steady pipeline of diverse, adaptable, critical thinkers who can thrive in a workplace environment that is increasingly reliant on advanced digital technologies across most sectors of the economy. Another aim of this initiative is to encourage traditionally underrepresented groups to take up tech-focused areas of study.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="events-section">
                 <h2>Events</h2>
-                <article>
-                    <img src="https://via.placeholder.com/400x300/1e1e1e/bb86fc?text=Digital+Design+Event" alt="Digital Design Event">
-                    <h3><a href="https://events.cuny.edu/cec/virtual-digital-design-showcase-day/">Virtual Digital Design Showcase</a></h3>
-                    <p>Date: June 18, 2020 <br>
-                    Time: 2:00 PM — 4:00 PM <br>
-                    College: Bronx Community College</p>
-                </article>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2023 CUNY Design</p>
-        </footer>
+                <div class="event-container">
+                    <div class="event-content">
+                        <div class="event-tags">
+                        </div>
+                        <h3>Virtual Digital Design Showcase Day</h3>
+                        <p><strong>Date:</strong> June 18, 2020<br>
+                        <strong>Time:</strong> 2:00 PM – 4:00 PM<br>
+                        <strong>College:</strong> Bronx Community College</p>
+                    </div>
+                    <div class="event-image">
+                        <img src="images/digitaldesign.png" alt="Digital Design Event">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <script>
-        function showMenu() {
-            var nav = document.getElementById("top-nav");
-            if (nav.style.display === "none" || nav.style.display === "") {
-                nav.style.display = "flex";
+        <script>
+        function showMenu(){
+            var menu = document.getElementById("topmenu");
+            if (menu.style.display === "none" || menu.style.display === ''){
+                menu.style.display = "block";
             } else {
-                nav.style.display = "none";
+                menu.style.display = "none";
             }
         }
     </script>
