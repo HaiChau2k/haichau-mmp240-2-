@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DESIGN @ CUNY</title>
+    <title>Find a Design Program</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="nav-bar">
         <div class="nav-title">DESIGN @ CUNY</div>
-        <div class="nav-links">
+        <button class="menu-toggle" onclick="showMenu()">☰</button>
+        <div class="nav-links" id="topmenu">
             <a href="#">ABOUT CUNY</a>
             <a href="#">FINANCIAL AID</a>
             <a href="#">APPLY</a>
@@ -98,5 +99,15 @@
             </div>
         </div>
     </div>
+        <script>
+        function showMenu(){
+            var menu = document.getElementById("topmenu");
+            if (menu.style.display === "none" || menu.style.display === ''){
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
