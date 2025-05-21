@@ -296,6 +296,7 @@ hr {
     position: relative;
     margin-top: 25px;
     border-radius: 8px;
+    padding: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
@@ -303,6 +304,7 @@ hr {
 .card-image {
     width: 100%;
     height: auto;
+    padding: 10px;
     display: block;
     transition: opacity 0.3s ease;
 }
