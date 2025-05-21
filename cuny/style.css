@@ -253,6 +253,12 @@ hr {
 }
 
 /* Program Card Styles */
+.programs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
 .program-card {
     background-color: #1e1e1e;
     border-radius: 8px;
