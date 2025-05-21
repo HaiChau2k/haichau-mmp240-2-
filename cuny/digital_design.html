@@ -8,13 +8,15 @@
 </head>
 <body>
     <div class="nav-bar">
-        <div class="nav-title">DESIGN @ CUNY</div>
+        <div class="nav-title"><a href="index.html" style="text-decoration: none; color: inherit;">DESIGN @ CUNY</a></div>
         <button class="menu-toggle" onclick="showMenu()">☰</button>
         <div class="nav-links" id="topmenu">
-                        <li><a href="https://www.cuny.edu/about/">About CUNY</a></li>
-                        <li><a href="https://www.cuny.edu/financial-aid/">Financial Aid</a></li>
-                        <li><a href="https://www.cuny.edu/apply">Apply</a></li>
-            <input type="text" class="search-box" placeholder="Search">
+            <ul>
+                <li><a href="https://www.cuny.edu/about/">About CUNY</a></li>
+                <li><a href="https://www.cuny.edu/financial-aid/">Financial Aid</a></li>
+                <li><a href="https://www.cuny.edu/apply/">Apply</a></li>
+            </ul>
+            <input type="text" class="search-box" placeholder="Search" style="width: 150px;">
         </div>
     </div>
 
@@ -57,5 +59,16 @@
             </div>
         </div>
     </div>
+     <script>
+        function showMenu(){
+            var menu = document.getElementById("topmenu");
+            if (menu.style.display === "none" || menu.style.display === ''){
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+</html>
 </body>
 </html>
