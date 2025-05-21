@@ -8,20 +8,16 @@
 </head>
 <body>
     <div class="nav-bar">
-          <div class="menuwrap">
-                <span class="material-symbols-outlined" onclick="showMenu()">
-                    menu
-                </span>
-
-                <nav id="top-nav">
-                    <ul>
-                        <li><a href="https://www.cuny.edu/about/">About CUNY</a></li>
-                        <li><a href="https://www.cuny.edu/financial-aid/">Financial Aid</a></li>
-                        <li><a href="https://www.cuny.edu/apply">Apply</a></li>
-                    </ul>
-                    <form action="/"><input type="search" value="search"></form>
-                </nav>
-            </div>
+        <div class="nav-title">DESIGN @ CUNY</div>
+        <button class="menu-toggle" onclick="showMenu()">☰</button>
+        <div class="nav-links" id="topmenu">
+            <ul>
+                <li><a href="https://www.cuny.edu/about/">About CUNY</a></li>
+                <li><a href="https://www.cuny.edu/financial-aid/">Financial Aid</a></li>
+                <li><a href="https://www.cuny.edu/apply">Apply</a></li>
+            </ul>
+            <input type="text" class="search-box" placeholder="Search">
+        </div>
     </div>
 
     <div class="content">
