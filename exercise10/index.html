@@ -1,21 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>exercise10</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="UTF-8">
-    <style>
-        nav li a{
-            display
-        }
-    <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10</title>
+<style>
+    nav ul{
+        padding: 0;
+
+    }
+    nav li a{
+        display:block;
+        background-color:rgb(84, 129, 145);
+        color:rgb(255, 255, 255);
+        text-decoration: none;
+        padding:0.5em 1em;
+        border-bottom: solid 1px white;
+    }
+nav li li a{
+    background-color: rgb(151, 191, 202);
+    color:rgb(0, 0, 0);
+}
+nav a:hover{
+background-color: rgb(116, 178, 178);
+}
+    li.dropdown ul{
+        display:none;
+    }
+   
+   li.dropdown:hover ul{
+    display:block;
+
+   }
+   .material-symbols-outlined{
+    float:right;
+    color:white;
+    padding-top:5px;
+    padding-right:5px;
+   }
+
+
+</style>
+
 </head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
 <body>
     <nav>
         <ul>
             <li class="dropdown">
-                <a href=""fruits
+                <span class="material-symbols-outlined">
+                    keyboard_arrow_down
+                    </span>
+                <a href="">Fruits</a>
+                
+            <ul>
+                <li><a href="#">Bananas</a></li>
+                <li><a href="#">Apples</a></li>
+                <li><a href="#">Oranges</a></li>
+            </ul>
+            </li>
 
+
+            <li class="dropdown">
+                <span class="material-symbols-outlined">
+                    keyboard_arrow_down
+                    </span>
+                <a href="">Vegetables</a>
+                
+            <ul>
+                <li><a href="#">Cucumbers</a></li>
+                <li><a href="#">Carrots</a></li>
+                <li><a href="#">Eggplants</a></li>
+            </ul>
+            </li>
+        </ul>
+    </nav>
 
 </body>
 </html>
