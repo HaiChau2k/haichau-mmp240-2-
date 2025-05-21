@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Design Program</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-title"><a href="index.html" style="text-decoration: none; color: inherit;">DESIGN @ CUNY</a></div>
+        <button class="menu-toggle" onclick="showMenu()">☰</button>
+        <div class="nav-links" id="topmenu">
+            <ul>
+                <li><a href="https://www.cuny.edu/about/">About CUNY</a></li>
+                <li><a href="https://www.cuny.edu/financial-aid/">Financial Aid</a></li>
+                <li><a href="https://www.cuny.edu/apply/">Apply</a></li>
+            </ul>
+            <input type="text" class="search-box" placeholder="Search" style="width: 150px;">
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Find a Design Program</h1>
+        
+        <div class="search-container">
+            <select onchange="window.location.href=this.value">
+                <option value="">Discipline</option>
+                <option value="digital_design.html">Digital Design</option>
+                <option value="animation.html">Animation</option>
+                <option value="industrial_design.html">Industrial Design</option>
+            </select>
+            <select onchange="window.location.href=this.value">
+                <option value="">Degree</option>
+                <option value="associate.html">Associate</option>
+                <option value="bachelor.html">Bachelor</option>
+            </select>
+            <select onchange="window.location.href=this.value">
+                <option value="">Borough</option>
+                <option value="bronx.html">Bronx</option>
+                <option value="brooklyn.html">Brooklyn</option>
+                <option value="queens.html">Queens</option>
+                <option value="manhattan.html">Manhattan</option>
+            </select>
+        </div>
+        
+        <hr>
+        <h1>Bronx</h1>
+        
+        <div class="programs-container">
+            <div class="program-card" onclick="window.location.href='https://www.bmcc.cuny.edu/academics/departments/media-arts-and-technology/multimedia-programming-and-design/'">
+                <div class="program-header">
+                    <div class="image-card">
+                        <img src="images/media-arts.jpg" alt="Digital Design Program" class="card-image">
+                        <div class="program-content">
+                            <h3>Borough of Manhattan Community College| Manhattan, NY</h3>
+                            <h4>Multimedia Programming and Design, <span>A.S.</span></h4>
+                            <p>The Multimedia Programming and Design Program prepares students for careers in a variety of multimedia industries, companies and institutions that develop, produce or market multimedia products, programs or services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="window.location.href='https://www.hostos.cuny.edu/www-hostosdesign-com'">
+                <div class="program-header">
+                    <div class="image-card">
+                        <img src="images/hcc-dda.jpg" alt="Animation Program" class="card-image">
+                        <div class="program-content">
+                            <h3>Hostos Community College| Bronx, NY</h3>
+                            <h4>Digital Design & Animation, <span>A.S.</span></h4>
+                            <p>Through lectures and studio-based classes the Digital Design and Animation Program
+                                provides students with a strong foundation for future occupations in motion graphics,
+                                animation, graphic design and/or web design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="window.location.href='https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)'">
+                <div class="program-header">
+                    <div class="image-card">
+                        <img src="images/hcc-gd.jpg" alt="Game Design" class="card-image">
+                        <div class="program-content">
+                            <h3>Hostos Community College| Bronx, NY</h3>
+                            <h4>Game Design, <span>A.S.</span></h4>
+                            <p>Through lectures and studio-based classes the Digital Design and Animation Program
+                                provides students with a strong foundation for future occupations in motion graphics,
+                                animation, graphic design and/or web design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="window.location.href='https://lehman-undergraduate.catalog.cuny.edu/programs/CGI-BS'">
+                <div class="program-header">
+                    <div class="image-card">
+                        <img src="images/lc-cgi.jpg" alt="Computer Graphics and Imaging" class="card-image">
+                        <div class="program-content">
+                            <h3>Lehman College| Bronx, NY</h3>
+                            <h4>Computer Graphics and Imaging, <span>B.S.</span></h4>
+                            <p>The Computer Graphics and Imaging program offers courses covering web design, imaging,
+                                3-D modeling, animation, interactivity, and broadcast design, preparing students for
+                                careers as well as graduate study in these fields.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showMenu(){
+            var menu = document.getElementById("topmenu");
+            if (menu.style.display === "none" || menu.style.display === ''){
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
