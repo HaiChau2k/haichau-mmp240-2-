@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Design Program</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-title"><a href="index.html" style="text-decoration: none; color: inherit;">DESIGN @ CUNY</a></div>
+        <button class="menu-toggle" onclick="showMenu()">☰</button>
+        <div class="nav-links" id="topmenu">
+            <ul>
+                <li><a href="https://www.cuny.edu/about/">About CUNY</a></li>
+                <li><a href="https://www.cuny.edu/financial-aid/">Financial Aid</a></li>
+                <li><a href="https://www.cuny.edu/apply/">Apply</a></li>
+            </ul>
+            <input type="text" class="search-box" placeholder="Search" style="width: 150px;">
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Find a Design Program</h1>
+        
+        <div class="search-container">
+            <select onchange="window.location.href=this.value">
+                <option value="">Discipline</option>
+                <option value="digital_design.html">Digital Design</option>
+                <option value="animation.html">Animation</option>
+                <option value="industrial_design.html">Industrial Design</option>
+            </select>
+            <select onchange="window.location.href=this.value">
+                <option value="">Degree</option>
+                <option value="associate.html">Associate</option>
+                <option value="bachelor.html">Bachelor</option>
+            </select>
+            <select onchange="window.location.href=this.value">
+                <option value="">Borough</option>
+                <option value="bronx.html">Bronx</option>
+                <option value="brooklyn.html">Brooklyn</option>
+                <option value="queens.html">Queens</option>
+                <option value="manhattan.html">Manhattan</option>
+            </select>
+        </div>
+        
+        <hr>
+        <h1>Bachelor's Degree</h1>
+
+        <div class="programs-container">
+            <div class="program-card" onclick="window.location.href='http://www.citytech.cuny.edu/communication-design/communication-design-bfa.aspx'">
+                <div class="program-header">
+                    <div class="image-card">
+                        <img src="images/ct-cd2.jpg" alt="Communication Design" class="card-image">
+                        <div class="program-content">
+                            <h3>New York City College Of Technology| Brooklyn, NY</h3>
+                            <h4>Communication Design, <span>B.F.A.</span></h4>
+                            <p>The BFA degree develops students' abilities to frame, research and solve increasingly
+                                complex visual communication problems. Students develop a professional portfolio that
+                                prepares them for employment as art directors, graphic designers, illustrators and web
+                                designers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="window.location.href='https://www.ccny.cuny.edu/edm'">
+                <div class="program-header">
+                    <div class="image-card">
+                        <img src="images/ccny-edm.jpg" alt="Electronic Design and Multimedia" class="card-image">
+                        <div class="program-content">
+                            <h3>The City College of New York| Manhattan, NY</h3>
+                            <h4>Electronic Design and Multimedia, <span>B.F.A.</span></h4>
+                            <p>The Electronic Design & Multimedia prepares students for careers in design in traditional
+                                print and emerging electronic media. It offers one of the most comprehensive, affordable
+                                4-year programs in electronic art at a New York City public university, and has a
+                                18-year record of alumni success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="window.location.href='https://york-undergraduate.catalog.cuny.edu/programs/COMTECH-BS'">
+                <div class="program-header">
+                    <div class="image-card">
+                        <img src="images/yc-ct.jpg" alt="Communications Technology" class="card-image">
+                        <div class="program-content">
+                            <h3>York College| Queens, NY</h3>
+                            <h4>Communications Technology, <span>B.S.</span></h4>
+                            <p>The York College Communications Technology major is an interdisciplinary program that
+                                blends media arts practices across television production, web design, and digital
+                                storytelling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="window.location.href='https://weissman.baruch.cuny.edu/weissman-academic-departments/areas-of-study/graphic-communication/'">
+                <div class="program-header">
+                    <div class="image-card">
+                        <img src="images/bc-gc.jpg" alt="Graphic Communication" class="card-image">
+                        <div class="program-content">
+                            <h3>Baruch College| Manhattan, NY</h3>
+                            <h4>Graphic Communication, <span>B.A</span></h4>
+                            <p>The graphic communication specialization provides training in graphics as well as basic
+                                training in the broader aspects of business communication. It prepares the graphic
+                                artist to enter a business environment.<</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card" onclick="window.location.href='https://www.qc.cuny.edu/academics/art/design-bfa/'">
+                <div class="program-header">
+                    <div class="image-card">
+                        <img src="images/qc-d.jpg" alt="Design" class="card-image">
+                        <div class="program-content">
+                            <h3>Queens College| Queens, NY</h3>
+                            <h4>Design, <span>B.F.A.</span></h4>
+                            <p>Queens College’s Design program combines knowledgeable faculty with industry standard
+                                software and the creativity of a studio-based learning environment. Students choose one
+                                of three concentrations: Communication Design, Animation & Illustration or Interaction
+                                Design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showMenu(){
+            var menu = document.getElementById("topmenu");
+            if (menu.style.display === "none" || menu.style.display === ''){
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
