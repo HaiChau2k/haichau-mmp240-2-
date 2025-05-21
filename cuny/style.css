@@ -252,6 +252,46 @@ hr {
     }
 }
 
+#top-nav {
+    position: absolute;
+    display: none;
+    text-align: center;
+    right: 0;
+    top: 45px;
+    z-index: 100;
+    border: solid 1px black;
+    background-color: rgba(161, 206, 203, 1);
+}
+
+#top-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+#top-nav a:hover {
+    background-color: #F88F33;
+}
+
+.menuwrap:hover #top-nav {
+    display: block;
+
+}
+
+.menuwrap .material-symbols-outlined {
+    color: white;
+}
+
+#top-nav ul a {
+    display: block;
+    padding: 5px;
+    border-bottom: solid 1px black;
+}
+
+#top-nav input {
+    display: block;
+    margin: 10px 5px;
+}
+
 /* Program Card Styles */
 .programs-container {
     display: grid;

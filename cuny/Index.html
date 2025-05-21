@@ -23,26 +23,46 @@
     <div class="content">
         <h1>Find a Design Program</h1>
         
-        <div class="search-container">
-            <select onchange="window.location.href=this.value">
-                <option value="">Discipline</option>
-                <option value="digital_design.html">Digital Design</option>
-                <option value="animation.html">Animation</option>
-                <option value="industrial_design.html">Industrial Design</option>
-            </select>
-            <select onchange="window.location.href=this.value">
-                <option value="">Degree</option>
-                <option value="associate.html">Associate</option>
-                <option value="bachelor.html">Bachelor</option>
-            </select>
-            <select onchange="window.location.href=this.value">
-                <option value="">Borough</option>
-                <option value="bronx.html">Bronx</option>
-                <option value="brooklyn.html">Brooklyn</option>
-                <option value="queens.html">Queens</option>
-                <option value="manhattan.html">Manhattan</option>
-            </select>
-        </div>
+          <nav class="programs-nav">
+            <h2>Find a Design Program</h2>
+            <h3>Search by:</h3>
+            <ul class="programs-menu">
+                <li class="dropdown">
+                    <span class="material-symbols-outlined">
+                        arrow_drop_down
+                    </span>
+                    <a href="">Discipline</a>
+                    <ul>
+                        <li><a href="digital-design.html">Digital Design</a></li>
+                        <li><a href="animation.html">Animation</a></li>
+                        <li><a href="industrial-design.html">Industrial Design</a></li>
+                    </ul>
+                </li><!--closing li.dropdown-->
+                <li class="dropdown">
+                    <span class="material-symbols-outlined">
+                        arrow_drop_down
+                    </span>
+                    <a href="">Degree</a>
+                    <ul>
+                        <li><a href="associate.html">Associate</a></li>
+                        <li><a href="bachelors.html">Bachelor's</a></li>
+                    </ul>
+                </li><!--closing li.dropdown-->
+                <li class="dropdown">
+                    <span class="material-symbols-outlined">
+                        arrow_drop_down
+                    </span>
+                    <a href="">Borough</a>
+                    <ul>
+                        <li><a href="bronx.html">Bronx</a></li>
+                        <li><a href="brooklyn.html">Brooklyn</a></li>
+                        <li><a href="queens.html">Queens</a></li>
+                        <li><a href="manhattan.html">Manhattan</a></li>
+                    </ul>
+                </li><!--closing li.dropdown-->
+            </ul>
+        </nav>
+
         
         <hr>
         
