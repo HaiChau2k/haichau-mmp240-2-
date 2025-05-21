@@ -5,16 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find a Design Program</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function redirectToPage(selectElement) {
-            const selectedValue = selectElement.value;
-            if (selectedValue) {
-                window.location.href = selectedValue;
-            }
-            // Reset to default option
-            selectElement.selectedIndex = 0;
-        }
-    </script>
 </head>
 <body>
     <div class="nav-bar">
@@ -32,18 +22,18 @@
         <h1>Find a Design Program</h1>
         
         <div class="search-container">
-            <select onchange="redirectToPage(this)">
+            <select onchange="window.location.href=this.value">
                 <option value="">Discipline</option>
                 <option value="digital_design.html">Digital Design</option>
                 <option value="animation.html">Animation</option>
                 <option value="industrial_design.html">Industrial Design</option>
             </select>
-            <select onchange="redirectToPage(this)">
+            <select onchange="window.location.href=this.value">
                 <option value="">Degree</option>
                 <option value="associate.html">Associate</option>
                 <option value="bachelor.html">Bachelor</option>
             </select>
-            <select onchange="redirectToPage(this)">
+            <select onchange="window.location.href=this.value">
                 <option value="">Borough</option>
                 <option value="bronx.html">Bronx</option>
                 <option value="brooklyn.html">Brooklyn</option>
@@ -92,7 +82,6 @@
             <hr class="news-divider">
 
             <div class="news-article">
-
                 <div class="article-content">
                     <h3>CUNY Expands Digital Skills Curriculum and Creates Student Pipeline for Tech Jobs</h3>
                     <p class="date">October 28, 2019</p>
@@ -100,6 +89,7 @@
                     <a href="#" class="read-more">Read More</a>
                 </div>
             </div>
+            
             <div class="events-section">
                 <h2>Events</h2>
                 <div class="event-container">
@@ -118,6 +108,7 @@
             </div>
         </div>
     </div>
+    
     <script>
         function showMenu(){
             var menu = document.getElementById("topmenu");
