@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design @ CUNY</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_drop_down,menu">
-
+    <title>Find a Design Program</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
-
-<body class="home">
-
-    <div id="wrapper">
-        <header>
-
-            <h1><a href="index.html">Design @ Cuny</a></h1>
-            <div class="menuwrap">
+<body>
+    <div class="nav-bar">
+          <div class="menuwrap">
                 <span class="material-symbols-outlined" onclick="showMenu()">
                     menu
                 </span>
@@ -32,110 +22,108 @@
                     <form action="/"><input type="search" value="search"></form>
                 </nav>
             </div>
+    </div>
 
-        </header>
-
-        <nav class="programs-nav">
-            <h2>Find a Design Program</h2>
-            <h3>Search by:</h3>
-            <ul class="programs-menu">
-                <li class="dropdown">
-                    <span class="material-symbols-outlined">
-                        arrow_drop_down
-                    </span>
-                    <a href="">Discipline</a>
-                    <ul>
-                        <li><a href="digital-design.html">Digital Design</a></li>
-                        <li><a href="animation.html">Animation</a></li>
-                        <li><a href="industrial-design.html">Industrial Design</a></li>
-                    </ul>
-                </li><!--closing li.dropdown-->
-                <li class="dropdown">
-                    <span class="material-symbols-outlined">
-                        arrow_drop_down
-                    </span>
-                    <a href="">Degree</a>
-                    <ul>
-                        <li><a href="associate.html">Associate</a></li>
-                        <li><a href="bachelors.html">Bachelor's</a></li>
-                    </ul>
-                </li><!--closing li.dropdown-->
-                <li class="dropdown">
-                    <span class="material-symbols-outlined">
-                        arrow_drop_down
-                    </span>
-                    <a href="">Borough</a>
-                    <ul>
-                        <li><a href="bronx.html">Bronx</a></li>
-                        <li><a href="brooklyn.html">Brooklyn</a></li>
-                        <li><a href="queens.html">Queens</a></li>
-                        <li><a href="manhattan.html">Manhattan</a></li>
-                    </ul>
-                </li><!--closing li.dropdown-->
-            </ul>
-        </nav>
-
-
-         <div class="image-banner">
+    <div class="content">
+        <h1>Find a Design Program</h1>
+        
+        <div class="search-container">
+            <select onchange="window.location.href=this.value">
+                <option value="">Discipline</option>
+                <option value="digital_design.html">Digital Design</option>
+                <option value="animation.html">Animation</option>
+                <option value="industrial_design.html">Industrial Design</option>
+            </select>
+            <select onchange="window.location.href=this.value">
+                <option value="">Degree</option>
+                <option value="associate.html">Associate</option>
+                <option value="bachelor.html">Bachelor</option>
+            </select>
+            <select onchange="window.location.href=this.value">
+                <option value="">Borough</option>
+                <option value="bronx.html">Bronx</option>
+                <option value="brooklyn.html">Brooklyn</option>
+                <option value="queens.html">Queens</option>
+                <option value="manhattan.html">Manhattan</option>
+            </select>
+        </div>
+        
+        <hr>
+        
+        <div class="image-banner">
             <img src="images/queenscollege.jpg" alt="Queens College Campus">
             <div class="banner-overlay">
                 <div class="banner-text">
-            <a href="http://www.cuny.edu/admissions/apply-to-cuny/" class="btn">Apply</a>
+                    <h2>Queens College Ranked in Top 25 of</h2>
+                    <h2>Best Public Colleges and Universities</h2>
+                    <h2>for Graphic Design in the Nation</h2>
+                </div>
+                <button class="apply-button">APPLY</button>
+            </div>
         </div>
-
-        <main>
-            <section class="news">
-                <h2>Design News</h2>
-                <article>
-                    <h3><a
-                            href="https://www1.cuny.edu/mu/forum/2020/04/27/cuny-tv-wins-21st-new-york-emmy-award-for-animated-opening-sequence-of-shades-of-u-s/">CUNY
-                            TV Wins 21st New York Emmy Award For Animated Opening Sequence of ‘Shades of U.S.’ </a>
-                    </h3>
+        
+        <div class="design-news">
+            <h1>Design News</h1>
+            
+            <div class="news-article">
+                <div class="article-content">
+                    <h3>CUNY TV Wins 21st New York Emmy Award For Animated Opening Sequence of 'Shades of U.S.'</h3>
                     <p class="date">April 27, 2020</p>
-                    <p>The City University of New York won two awards in the 63rd New York Emmy Awards, as CUNY TV and
-                        the New York City College of Technology each earned honors in Saturday’s ceremony. The award for
-                        CUNY TV brings to 21 the total number of Emmys the station has been awarded by the National
-                        Academy of Television Arts & Sciences New York Chapter.</p>
-                    <p class="more"><a
-                            href="https://www1.cuny.edu/mu/forum/2020/04/27/cuny-tv-wins-21st-new-york-emmy-award-for-animated-opening-sequence-of-shades-of-u-s/">Read
-                            more</a></p>
-                </article>
-                <article>
-                    <h3><a
-                            href="https://www1.cuny.edu/mu/forum/2019/10/28/cuny-expands-digital-skills-curriculum-and-creates-student-pipeline-for-tech-jobs/">CUNY
-                            Expands Digital Skills Curriculum and Creates Student Pipeline for Tech Jobs</a></h3>
-                    <p class="date">October 28, 2018</p>
-                    <p>The City University of New York has significantly expanded its digital skills curriculum as part
-                        of a broad-based effort to produce a steady pipeline of diverse, adaptable, critical thinkers
-                        who can thrive in a workplace environment that is increasingly reliant on advanced digital
-                        technologies across most sectors of the economy. Another aim of this initiative is to encourage
-                        traditionally underrepresented groups to take up tech-focused areas of study.
-                    </p>
-                    <p class="more"><a
-                            href="https://www1.cuny.edu/mu/forum/2019/10/28/cuny-expands-digital-skills-curriculum-and-creates-student-pipeline-for-tech-jobs/">Read
-                            More</a></p>
-                </article>
-            </section>
+                    <p>The City University of New York won two awards in the 63rd New York Emmy Awards, as CUNY TV and the New York City College of Technology each earned honors in Saturday's ceremony. The award for CUNY TV brings to 21 the total number of Emmys the station has been awarded by the National Academy of Television Arts & Sciences New York Chapter.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <hr class="news-divider">
+            
+            <div class="news-article">
+                <div class="article-content">
+                    <h3>CUNY Expands Digital Skills Curriculum and Creates Student Pipeline for Tech Jobs</h3>
+                    <p class="date">October 28, 2019</p>
+                    <p>The City University of New York has significantly expanded its digital skills curriculum as part of a broad-based effort to produce a steady pipeline of diverse, adaptable, critical thinkers who can thrive in a workplace environment that is increasingly reliant on advanced digital technologies across most sectors of the economy. Another aim of this initiative is to encourage traditionally underrepresented groups to take up tech-focused areas of study.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <hr class="news-divider">
 
-            <section class="events">
+            <div class="news-article">
+                <div class="article-content">
+                    <h3>CUNY Expands Digital Skills Curriculum and Creates Student Pipeline for Tech Jobs</h3>
+                    <p class="date">October 28, 2019</p>
+                    <p>The City University of New York has significantly expanded its digital skills curriculum as part of a broad-based effort to produce a steady pipeline of diverse, adaptable, critical thinkers who can thrive in a workplace environment that is increasingly reliant on advanced digital technologies across most sectors of the economy. Another aim of this initiative is to encourage traditionally underrepresented groups to take up tech-focused areas of study.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <div class="events-section">
                 <h2>Events</h2>
-                <article>
-                    <img src="images/digitaldesign.png" alt="news">
-                    <h3><a href="https://events.cuny.edu/cec/virtual-digital-design-showcase-day/">Virtual Digital
-                            Design Showcase</a></h3>
-                    <p>Date: June 18, 2020 <br>
-                        Time: 2:00 PM — 4:00 PM <br>
-                        College: Bronx Community College</p>
-                </article>
-            </section>
-        </main>
-        <footer>
-            <p>&copy;CUNY Design</p>
-
-        </footer>
+                <div class="event-container">
+                    <div class="event-content">
+                        <div class="event-tags">
+                        </div>
+                        <h3>Virtual Digital Design Showcase Day</h3>
+                        <p><strong>Date:</strong> June 18, 2020<br>
+                        <strong>Time:</strong> 2:00 PM – 4:00 PM<br>
+                        <strong>College:</strong> Bronx Community College</p>
+                    </div>
+                    <div class="event-image">
+                        <img src="images/digitaldesign.png" alt="Digital Design Event">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="showMenu.js"></script>
-
+    
+    <script>
+        function showMenu(){
+            var menu = document.getElementById("topmenu");
+            if (menu.style.display === "none" || menu.style.display === ''){
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
 </body>
-
 </html>
