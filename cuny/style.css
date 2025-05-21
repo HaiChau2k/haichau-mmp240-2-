@@ -296,7 +296,6 @@ hr {
     position: relative;
     margin-top: 25px;
     border-radius: 8px;
-    padding: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
